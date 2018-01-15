@@ -8,7 +8,8 @@ set $mod Mod4
 # workspace_layout tabbed <stacking|tabbed>
 
 # Configure border style <normal|1pixel|pixel xx|none|pixel>
-new_window pixel 1
+#new_window pixel 1
+new_window pixel 3
 new_float normal
 
 # Hide borders
@@ -27,13 +28,15 @@ font xft:Noto Sans 10
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec terminal
+#bindsym $mod+Return exec terminal
+bindsym $mod+Return exec gnome-terminal
 
 # kill focused window
 bindsym $mod+Shift+q kill
 
 # start program launcher
-bindsym $mod+d exec --no-startup-id dmenu_recency
+#bindsym $mod+d exec --no-startup-id dmenu_recency
+bindsym $mod+d exec rofi -show run
 
 # launch categorized menu
 bindsym $mod+z exec --no-startup-id morc_menu
@@ -337,7 +340,8 @@ set $i3_color4          #16A085
 set $i3_color5          #FDF6E3
 set $i3_color6          #EEE8D5
 set $i3_color7          #E5201D
-set $i3_color8          #808380
+#set $i3_color8          #808380
+set $i3_color8		#773e15
 set $i3_color9          #434745
 set $i3_color10         #454948
 set $i3_color11         #80FFF9
@@ -394,8 +398,10 @@ client.background       $i3_background
 #############################
 
 # Set inner/outer gaps
-gaps inner 15
-gaps outer -4
+#gaps inner 15
+gaps inner 20
+#gaps outer -4
+gaps outer 3
 
 # Additionally, you can issue commands with the following syntax. This is useful to bind keys to changing the gap size.
 # gaps inner|outer current|all set|plus|minus <px>
